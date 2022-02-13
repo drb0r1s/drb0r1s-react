@@ -1,0 +1,59 @@
+.loading {
+    @include flex-center(column, center);
+    height: 100vh;
+    background: white;
+    position: relative;
+
+    .loader {
+        @include flex-center;
+        height: 300px;
+        width: 300px;
+        background: black;
+        border: 3px solid white;
+        border-radius: 50%;
+        animation: invertLoader 1500ms linear infinite;
+
+        img {
+            height: auto;
+            width: 250px;
+            filter: invert(1);
+        }
+    }
+
+    .circle {
+        height: 290px;
+        width: 290px;
+        background: transparent;
+        border: 10px solid transparent;
+        border-top: 10px solid white;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 5;
+        animation: rotating 3s linear infinite,
+        invertLoader 1500ms linear infinite;
+
+        @keyframes rotating {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    @keyframes invertLoader {
+        0% {
+            filter: invert(0);
+        }
+
+        50% {
+            filter: invert(1);
+        }
+        
+        100% {
+            filter: invert(0);
+        }
+    }
+}

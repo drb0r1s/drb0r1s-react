@@ -1,0 +1,435 @@
+.projects {
+    @include flex-center;
+    background: white;
+    margin: 50px 0;
+
+    .projects-holder {
+        @include flex-center(column, center);
+        width: 90vw;
+        background: linear-gradient(
+            rgba(52, 146, 235, 0.3),
+            rgba(242, 24, 213, 0.3),
+            rgba(0, 0, 0, 0.7)
+        ), url("../images/projects-bg.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        border-radius: 20px;
+        box-shadow: $defShadow;
+        transition: 300ms;
+
+        &:hover {
+            box-shadow: $defStrongShadow;
+        }
+
+        h2 {
+            @include default-heading;
+            font-size: 70px;
+        }
+
+        .card-holder {
+            @include flex-center(row, space-between);
+            width: 85vw;
+            margin: 30px 0;
+            padding: 20px 15px;
+            
+            .project-card {
+                @include flex-center;
+                height: 300px;
+                width: 65vw;
+                background: linear-gradient(45deg, white 50%, $defBlue 60%, $defPink);
+                border-radius: 20px;
+                position: relative;
+                top: 0;
+                margin: 10px;
+                padding: 5px 10px;
+                transition: 300ms;
+    
+                &:hover {
+                    top: -10px;
+                }
+    
+                .card-title {
+                    @include flex-center(column, center);
+                    width: 20vw;
+                    
+                    h3 {
+                        color: $defDarkBlue;
+                        font-size: set-size(xxl);
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: 3px;
+                        margin: 0;
+                    }
+
+                    p {
+                        color: $defDarkBlue;
+                        font-size: set-size(md);
+                        text-align: center;
+                        text-transform: capitalize;
+                        letter-spacing: 3px;
+                        margin: 0;
+                    }
+                }
+    
+                .card-projects {
+                    @include flex-center;
+                    width: 45vw;
+
+                    button {
+                        @include flex-center;
+                        height: 75px;
+                        width: 75px;
+                        background: transparent;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+                        top: 0;
+                        margin: 10px;
+                        padding: 10px;
+                        transition: 300ms;
+
+                        &:hover {
+                            background: $defBlue;
+                            top: -5px;
+                            box-shadow: $defShadow;
+                        }
+
+                        img {
+                            height: auto;
+                            width: 50px;
+                            object-fit: contain;
+                            filter: invert(0);
+                            transition: 300ms;
+                        }
+
+                        &:hover img {
+                            filter: invert(1);
+                        }
+                    }
+
+                    .disabled-button {
+                        cursor: default;
+                        opacity: 0.5;
+                        transition: 300ms;
+
+                        &:hover {
+                            background: transparent;
+                            top: 0;
+                            box-shadow: none;
+                        }
+
+                        &:hover img {
+                            filter: invert(0);
+                        }
+                    }
+    
+                    .card-projects-holder {
+                        @include flex-center;
+                        height: 180px;
+                        width: 40vw;
+                        border: 3px solid $defBlue;
+                        box-shadow: $defInnerShadow;
+                        position: relative;
+                        overflow: hidden;
+
+                        .projects-scroll {
+                            @include flex-center(row, left);
+                            position: absolute;
+                            left: 0;
+                            padding: 5px 0;
+                            transition: 300ms;
+    
+                            .single-project {
+                                @include flex-center(column, center);
+                                width: 300px;
+                                position: relative;
+                                margin: 0 15px;
+                                
+                                img {
+                                    height: 150px;
+                                    width: 300px;
+                                    object-fit: cover;
+                                    border-radius: 20px;
+                                    box-shadow: $defLightShadow;
+                                    filter: invert(0);
+                                    cursor: pointer;
+                                    position: relative;
+                                    top: 0;
+                                    margin: 5px 10px;
+                                    transition: 300ms;
+                                }
+
+                                &:hover img {
+                                    box-shadow: $defShadow;
+                                    filter: invert(0) brightness(0.5);
+                                    top: -5px;
+                                }
+
+                                strong {
+                                    color: white;
+                                    font-size: set-size(xxl);
+                                    text-align: center;
+                                    text-shadow: $defTextShadow;
+                                    cursor: pointer;
+                                    opacity: 0;
+                                    position: absolute;
+                                    transition: 300ms;
+                                }
+
+                                &:hover strong {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
+                        .projects-scroll-one {
+                            @include flex-center(column, center);
+                            position: relative;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+
+            .special-img {
+                height: auto;
+                width: 150px;
+                filter: invert(1);
+            }
+        }
+    }
+
+    .project-modal {
+        height: 500px;
+        width: 70vw;
+        background: white;
+        border-radius: 20px;
+        box-shadow: $defShadow;
+        margin-top: -250px;
+        margin-left: -35vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transition: 300ms;
+        z-index: 60;
+
+        &:hover {
+            box-shadow: $defStrongShadow;
+        }
+
+        .modal-x {
+            @include modal-x;
+        }
+
+        .modal-bg {
+            @include flex-center(column, center);
+            height: 500px;
+            border-radius: 20px;
+
+            h4 {
+                @include default-heading;
+                @include gradient-text;
+                font-size: set-size(xxheading);
+                text-align: center;
+                word-break: break-all;
+            }
+    
+            strong {
+                color: $defBlue;
+                font-size: set-size(xxl);
+                text-align: center;
+                text-transform: capitalize;
+            }
+        }
+
+        .modal-info {
+            @include flex-center(column, center);
+            
+            .basic-info {
+                @include flex-center(column, center);
+                margin: 20px 0;
+
+                h4, h5 {
+                    color: black;
+                    font-size: set-size(heading);
+                    text-align: center;
+                    text-transform: capitalize;
+                    letter-spacing: 5px;
+                    word-break: break-all;
+                }
+
+                h5 {
+                    font-size: set-size(xxl);
+                }
+
+                span {
+                    color: $defBlue;
+                    font-weight: bold;
+                }
+            }
+
+            .preview-info {
+                @include flex-center(column, center);
+                width: 60vw;
+                margin: 20px 0;
+                border-top: 3px solid $defBlue;
+                border-bottom: 3px solid $defBlue;
+
+                .images-slider {
+                    @include flex-center;
+                    padding: 10px 0;
+                    
+                    button {
+                        @include flex-center;
+                        height: 75px;
+                        width: 75px;
+                        background: transparent;
+                        border: none;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        position: relative;
+                        top: 0;
+                        margin: 10px;
+                        padding: 10px;
+                        transition: 300ms;
+
+                        &:hover {
+                            color: white;
+                            background: $defBlue;
+                            top: -5px;
+                            box-shadow: $defShadow;
+                        }
+
+                        img {
+                            height: auto;
+                            width: 50px;
+                            object-fit: contain;
+                            transition: 300ms;
+                        }
+
+                        &:hover img {
+                            filter: invert(1);
+                        }
+                    }
+
+                    .main-slider {
+                        height: 400px;
+                        width: auto;
+                        border: 1px solid $defBlue;
+                        border-radius: 20px;
+                        box-shadow: $defShadow;
+                        position: relative;
+                        left: 0;
+                        transition: 500ms;
+                    }
+                }
+
+                strong {
+                    color: black;
+                    font-size: set-size(xxl);
+                    text-transform: capitalize;
+                    text-align: center;
+                    letter-spacing: 5px;
+                    margin: 15px 0;
+
+                    a {
+                        color: $defBlue;
+                        text-decoration: none;
+                        cursor: pointer;
+                        position: relative;
+                        top: 0;
+                        transition: 300ms;
+
+                        &:hover {
+                            top: -5px;
+                            text-shadow: $defTextShadow;
+                        }
+                    }
+                }
+            }
+
+            .description-info {
+                @include flex-center(column, center);
+
+                h5 {
+                    @include default-heading;
+                    color: $defBlue;
+                    font-size: set-size(xxheading);
+                    text-transform: capitalize;
+                }
+
+                .description-about,
+                .description-dev {
+                    @include flex-center(column, center);
+                    border-bottom: 3px dashed $defBlue;
+                    margin: 20px 0;
+                    padding: 15px 10px;
+
+                    p {
+                        width: 600px;
+                        color: black;
+                        font-size: set-size(md);
+                        text-align: center;
+
+                        span {
+                            text-transform: none;
+                        }
+                    }
+                }
+
+                .description-dev {
+                    border: none;
+
+                    .dev-images {
+                        @include flex-center;
+                        flex-wrap: wrap;
+
+                        .dev-logo {
+                            height: auto;
+                            width: 100px;
+                            margin: 0 20px;
+                        }
+                    }
+                }
+
+                strong {
+                    color: black;
+                    font-size: set-size(xxl);
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    @include gradient-text;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+.r-button-holder {
+    @include flex-center;
+    margin-top: 10px;
+}
+
+.project-card-left {
+    box-shadow: 15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+
+    &:hover {
+        box-shadow: 25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.project-card-right {
+    box-shadow: -15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+    
+    &:hover {
+        box-shadow: -25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+    }
+}

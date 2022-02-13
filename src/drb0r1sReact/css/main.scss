@@ -1,0 +1,177 @@
+$defBlue: #3492eb;
+$defBlackBlue: #084278;
+$defBlackerBlue: #021221;
+$defDarkBlue: #0979e3;
+$def3dBlueShadow: -5px 5px 0px rgba(66, 135, 245, 0.8), -10px 10px 0px rgba(66, 135, 245, 0.9), -15px 15px 0px rgba(66, 135, 245, 1), 2px 2px 4px rgba(206,89,55,0);
+$defPink: #f218d5;
+$defNeonBlueShadow: 0px 0px 20px 15px $defBlue;
+$defLightShadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+$defShadow: 5px 5px 15px 5px rgba(0,0,0,0.5);
+$defStrongShadow: 5px 5px 15px 5px rgba(0,0,0,0.7);
+$defInnerShadow: inset 0px 0px 15px 5px rgba(0,0,0,0.5);
+$defLightWhiteShadow: 5px 5px 15px 5px rgba(255,255,255,0.3);
+$defWhiteShadow: 5px 5px 15px 5px rgba(255,255,255,0.5);
+$defStrongWhiteShadow: 5px 5px 15px 5px rgba(255,255,255,0.7);
+$defTextShadow: 5px 5px 2px rgba(0,0,0,0.5);
+$defWhiteTextShadow: 5px 5px 2px rgba(255,255,255,0.5);
+
+$defSizeArray: (
+    "xs": 10px,
+    "sm": 15px,
+    "md": 20px,
+    "lg": 25px,
+    "xl": 30px,
+    "xxl": 35px,
+    "heading": 50px,
+    "xheading": 60px,
+    "xxheading": 70px,
+    "superheading": 100px
+);
+
+@function set-size($size) {
+    @return map-get($defSizeArray, $size);
+}
+
+@mixin flex-center($direction: row, $spacing: center) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $spacing;
+}
+
+@mixin default-heading {
+    color: white;
+    font-size: set-size(heading);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+@mixin gradient-text($gradient: (45deg, $defDarkBlue, $defPink)) {
+    background: -webkit-linear-gradient($gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin text-holder {
+    .text-holder {
+        padding: 15px;
+        
+        h3 {
+            @include default-heading;
+            @include gradient-text;
+            font-weight: bold;
+        }
+
+        p {
+            color: black;
+            font-size: set-size(md);
+        }
+    }
+}
+
+@mixin modal-x {
+    height: 5px;
+    width: 50px;
+    background: black;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    transform: rotate(45deg);
+    transition: 700ms;
+
+    &:hover {
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        display: block;
+        content: "";
+        height: 5px;
+        width: 50px;
+        background: black;
+        transform: rotate(-90deg);
+        transition: 300ms;
+    }
+
+    &:hover::after {
+        transform: rotate(90deg);
+    }
+}
+
+@mixin screen-taskbar {
+    @include flex-center(row, space-between);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    transition: 300ms;
+
+    button {
+        color: white;
+        font-size: set-size(xxl);
+        letter-spacing: 3px;
+        background: transparent;
+        border: 1px solid transparent;
+        cursor: pointer;
+        position: relative;
+        top: 0;
+        margin: 0 15px;
+        padding: 5px 10px;
+        transition: 300ms;
+
+        &:hover {
+            color: black;
+            background: white;
+            border: 1px solid black;
+            top: -5px;
+            box-shadow: $defWhiteShadow;
+        }
+    }
+}
+
+@font-face {
+    font-family: drb0r1sFont;
+    src: url("../Outfit-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: drb0r1sFont;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(45deg, white, black);
+}
+
+::-webkit-scrollbar-thumb {
+    background: $defBlue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $defDarkBlue;
+}
+
+@import "./sections-style/loading";
+@import "./sections-style/mainSection";
+@import "./sections-style/menuSection";
+@import "./sections-style/about/about";
+@import "./sections-style/projects";
+@import "./sections-style/contact";
+@import "./sections-style/seeMore";
+@import "./sections-style/footer";
+
+@import "./responsive/responsive319";
+@import "./responsive/responsive320";
+@import "./responsive/responsive481";
+@import "./responsive/responsive769";
+@import "./responsive/responsive1025";
+@import "./responsive/responsive1201";
+@import "./responsive/responsive1700";

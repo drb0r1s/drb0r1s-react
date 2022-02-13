@@ -1,0 +1,55 @@
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .main-section {
+        .info-holder {
+            img {
+                width: 500px;
+            }
+        }
+
+        .logo-holder {
+            img {
+                width: 330px;
+            }
+        }
+    }
+
+    .about {
+        .about-holder {
+            .about-boris,
+            .about-react,
+            .about-boris-react {
+                width: 95vw;
+
+                .text-holder h3 {
+                    margin-top: 30px;
+                }
+            }
+
+            .about-boris {
+                .logo-holder {
+                    height: 300px;
+
+                    a img {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+
+    .projects {
+        .projects-holder .card-holder .special-img {
+            width: 120px;
+        }
+
+        .project-modal {
+            .modal-bg h4 {
+                font-size: 60px;
+            }
+
+            .modal-info .preview-info .images-slider .main-slider {
+                height: 270px;
+            }
+        }
+    }
+}

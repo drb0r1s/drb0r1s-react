@@ -1,0 +1,92 @@
+.about {
+    @include flex-center(column, center);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url("../images/about-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding: 10px 15px;
+
+    .custom-shape-divider-top-1643117808 {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-top-1643117808 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 112px;
+    }
+    
+    .custom-shape-divider-top-1643117808 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    h2 {
+        @include default-heading;
+        font-size: set-size(xxheading);
+        margin-top: 100px;
+    }
+
+    span {
+        @include gradient-text;
+        font-weight: bold;
+    }
+
+    .link {
+        @include gradient-text;
+        font-weight: bold;
+        text-decoration: none;
+        position: relative;
+        top: 0;
+        transition: 300ms;
+
+        &:hover {
+            top: -5px
+        }
+    }
+
+    .about-holder {
+        @include flex-center(column, center);
+        @import "./aboutBoris";
+        @import "./aboutReact";
+        @import "./aboutBorisReact";
+        border-radius: 40px;
+        box-shadow: $defShadow;
+        margin: 30px 0;
+        margin-bottom: 70px;
+        transition: 300ms;
+
+        &:hover {
+            box-shadow: $defWhiteShadow;
+        }
+    }
+
+    .custom-shape-divider-bottom-1643290179 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1643290179 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 50px;
+    }
+    
+    .custom-shape-divider-bottom-1643290179 .shape-fill {
+        fill: #FFFFFF;
+    }
+}

@@ -1,0 +1,58 @@
+.about-boris-react {
+    @include flex-center(column, center);
+    height: 450px;
+    width: 85vw;
+    background: white;
+    border-bottom-right-radius: 40px;
+    position: relative;
+
+    .custom-shape-divider-top-1643126683 {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-top-1643126683 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 70px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-top-1643126683 .shape-fill {
+        fill: #000000;
+    }
+
+    @include text-holder;
+
+    .text-holder {
+        @include flex-center(column, center);
+
+        p {
+            width: 50vw;
+            text-align: center;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+        img {
+            height: auto;
+            width: 300px;
+            position: relative;
+            top: 0;
+            transition: 500ms;
+
+            &:hover {
+                top: -10px;
+                filter: drop-shadow(5px 5px 5px black);
+            }
+        }
+    }
+}

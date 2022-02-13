@@ -1,0 +1,61 @@
+.about-react {
+    @include flex-center(column, center);
+    height: 400px;
+    width: 85vw;
+    background: black;
+    position: relative;
+
+    .custom-shape-divider-top-1643124743 {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-top-1643124743 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 70px;
+    }
+    
+    .custom-shape-divider-top-1643124743 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .logo-holder {
+        @include flex-center;
+
+        img {
+            height: auto;
+            width: 250px;
+            background: black;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            position: relative;
+            top: 0;
+            transition: 500ms;
+        
+            &:hover {
+                top: -10px;
+                box-shadow: $defShadow;
+                filter: invert(1);
+                border: 1px solid black;
+                animation: rotateLogo 3s linear infinite;
+    
+                @keyframes rotateLogo {
+                    0% { transform: rotate(0) }
+                    100% { transform: rotate(360deg) }
+                }
+            }
+        }
+    }
+
+    @include text-holder;
+
+    .text-holder p {
+        color: white;
+    }
+}

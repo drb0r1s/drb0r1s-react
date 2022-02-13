@@ -1,0 +1,649 @@
+.contact {
+    @include flex-center(column, center);
+    background: black;
+    position: relative;
+    padding: 70px 10px;
+    
+    .custom-shape-divider-top-1644067675 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-top-1644067675 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 70px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-top-1644067675 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .contact-holder {
+        @include flex-center;
+
+        .title-holder {
+            @include flex-center(column, center);
+    
+            h2 {
+                @include default-heading;
+                color: white;
+                font-size: set-size(xheading);
+                text-align: center;
+                font-weight: bold;
+    
+                span {
+                    @include gradient-text;
+                }
+            }
+
+            p {
+                color: white;
+                text-align: center;
+                font-size: set-size(lg);
+                
+                span {
+                    @include gradient-text;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .content-holder {
+            @include flex-center(column, center);
+
+            .phone {
+                @include flex-center(column, center);
+                height: 650px;
+                width: 450px;
+                background: white;
+                border-radius: 20px;
+                box-shadow: inset -5px 3px 15px 5px rgba(0,0,0,0.7);
+                user-select: none;
+                position: relative;
+                top: 0;
+                transition: 500ms;
+                z-index: 5;
+
+                &:hover {
+                    top: -10px;
+                }
+
+                .camera {
+                    height: 15px;
+                    width: 15px;
+                    background: black;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 5px;
+                }
+                
+                .screen {
+                    $screenHeight: 600px;
+                    $screenWidth: 400px;
+                    
+                    @include flex-center(column, flex-start);
+                    height: $screenHeight;
+                    width: $screenWidth;
+                    background: linear-gradient(
+                        rgba(0, 0, 0, 0.7),
+                        rgba(0, 0, 0, 0.7)
+                    ), url("../images/about-bg.jpg");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    border-radius: 20px;
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                    position: relative;
+                    overflow: hidden;
+
+                    .screen-time {
+                        @include flex-center(column, center);
+                        margin: 20px 0;
+                        border-bottom: 1px solid white;
+                        
+                        strong {
+                            color: white;
+                            font-size: set-size(xxl);
+                            letter-spacing: 3px;
+                        
+                            &:last-child {
+                                font-size: set-size(md);
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+
+                    .screen-apps {
+                        @include flex-center;
+                        flex-wrap: wrap;
+                        margin: 20px 0;
+                        padding: 0 15px;
+
+                        .screen-app {
+                            @include flex-center(column, center);
+                            background: transparent;
+                            cursor: pointer;
+                            margin: 10px;
+                            transition: 300ms;
+                            
+                            .icon-holder {
+                                @include flex-center;
+                                height: 75px;
+                                width: 75px;
+                                background: white;
+                                border-radius: 25px;
+                                position: relative;
+                                top: 0;
+                                padding: 10px;
+                                transition: 300ms;
+
+                                img {
+                                    height: 50px;
+                                    width: 50px;
+                                    object-fit: contain;
+                                    transition: 300ms;
+                                }
+                            }
+
+                            &:hover .icon-holder {
+                                border-radius: 50%;
+                                top: -5px;
+                                box-shadow: $defLightShadow;
+                                filter: invert(1);
+                            }
+    
+                            p {
+                                color: white;
+                                font-size: set-size(md);
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+
+                    .screen-app-modal {
+                        @include flex-center(column, center);
+                        height: 0;
+                        width: 0;
+                        background: white;
+                        border: 1px solid black;
+                        border-radius: 20px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        position: absolute;
+                        padding: 5px 15px;
+                        transition: 300ms;
+                        z-index: 5;
+
+                        .modal-text {
+                            @include flex-center(column, center);
+                            width: 100%;
+                            opacity: 0;
+                            position: relative;
+                            top: -15px;
+                            transition: 300ms;
+
+                            .settings-bg,
+                            .settings-mode {
+                                @include flex-center(row, space-between);
+                                width: 100%;
+                                border-top: 1px solid black;
+                                border-bottom: 1px solid black;
+                                padding: 10px 15px;
+
+                                strong {
+                                    color: black;
+                                    font-size: set-size(lg);
+                                    text-transform: capitalize;
+                                    letter-spacing: 3px;
+                                }
+
+                                p {
+                                    height: 50px;
+                                    width: 50px;
+                                    color: grey;
+                                    font-size: set-size(xxl);
+                                    text-align: center;
+                                    text-transform: uppercase;
+                                    cursor: pointer;
+                                    position: relative;
+                                    top: 0;
+                                    margin: 0;
+                                    transition: 300ms;
+
+                                    &:hover {
+                                        color: white;
+                                        background: black;
+                                        border-radius: 50%;
+                                        top: -5px;
+                                        box-shadow: $defLightShadow;
+                                    }
+                                }
+                            }
+
+                            .settings-mode {
+                                border-top: none;
+                            }
+                            
+                            .app-logo {
+                                @include flex-center;
+                                margin: 15px 0;
+    
+                                img {
+                                    height: 75px;
+                                    width: 75px;
+                                    margin-right: 10px;
+                                }
+    
+                                p {
+                                    color: black;
+                                    font-size: set-size(xxl);
+                                    text-transform: uppercase;
+                                    font-weight: bold;
+                                    letter-spacing: 3px;
+                                    margin: 0;
+                                }
+                            }
+
+                            .app-profile {
+                                @include flex-center;
+                                flex-wrap: wrap;
+                                margin: 20px 0;
+
+                                img {
+                                    height: 100px;
+                                    width: 100px;
+                                    border: 10px double black;
+                                    border-radius: 50%;
+                                    position: relative;
+                                    top: 0;
+                                    transition: 300ms;
+
+                                    &:hover {
+                                        top: -5px;
+                                        box-shadow: $defLightShadow;
+                                    }
+                                }
+
+                                .app-info {
+                                    @include flex-center(column, center);
+                                    margin: 0 10px;
+
+                                    p {
+                                        color: black;
+                                        font-size: set-size(xl);
+                                        margin: 0;
+                                    }
+
+                                    strong {
+                                        color: black;
+                                        font-size: set-size(lg);
+                                    }
+                                }
+                            }
+
+                            a {
+                                color: white;
+                                font-size: set-size(md);
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                text-align: center;
+                                background: black;
+                                border: 1px solid transparent;
+                                border-radius: 10px;
+                                cursor: pointer;
+                                position: relative;
+                                top: 0;
+                                margin: 15px 0;
+                                padding: 5px 10px;
+                                transition: 300ms;
+
+                                &:hover {
+                                    color: black;
+                                    background: white;
+                                    border: 1px solid black;
+                                    top: -5px;
+                                    box-shadow: $defLightShadow;
+                                }
+                            }
+                        }
+                    }
+
+                    #active-app-modal {
+                        height: $screenHeight;
+                        width: $screenWidth;
+
+                        .modal-x {
+                            @include modal-x;
+                        }
+                    }
+
+                    #minimized-app-modal {
+                        height: 0;
+                        width: 0;
+                        bottom: -20px;
+                    }
+
+                    .screen-mini-modal {
+                        @include flex-center(column, center);
+                        height: 0;
+                        width: 0;
+                        background: transparent;
+                        border: none;
+                        border-radius: 20px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        backdrop-filter: blur(2px);
+                        position: absolute;
+                        padding: 5px 15px;
+                        transition: 300ms;
+                        z-index: 10;
+
+                        .modal-text {
+                            @include flex-center(column, center);
+                            opacity: 0;
+                            position: relative;
+                            top: -15px;
+                            transition: 300ms;
+
+                            strong {
+                                color: white;
+                                font-size: set-size(xxl);
+                                text-align: center;
+                            }
+
+                            .mini-apps {
+                                @include flex-center;
+                                position: relative;
+                                left: 0;
+                                
+                                .mini-app {
+                                    @include flex-center(column, center);
+                                    height: 300px;
+                                    width: 250px;
+                                    background: white;
+                                    border: 1px solid black;
+                                    border-radius: 20px;
+                                    cursor: pointer;
+                                    position: relative;
+                                    margin: 0 10px;
+                                    transition: 300ms;
+
+                                    .modal-x {
+                                        @include modal-x;
+                                        height: 3px !important;
+                                        width: 30px !important;
+                                        background: black !important;
+                                        top: 30px !important;
+                                        right: 30px !important;
+                                        
+                                        &::after {
+                                            height: 3px !important;
+                                            width: 30px !important;
+                                            background: black !important;
+                                        }
+                                    }
+                                    
+                                    .mini-app-info {
+                                        @include flex-center(column, center);
+                                        position: relative;
+                                        top: 0;
+                                        transition: 300ms;
+
+                                        &:hover {
+                                            top: -5px;
+                                            box-shadow: $defWhiteShadow;
+                                        }
+                                        
+                                        img {
+                                            height: 100px;
+                                            width: 100px;
+                                        }
+    
+                                        strong {
+                                            color: black;
+                                            font-size: set-size(xxl);
+                                            text-transform: uppercase;
+                                        }
+                                    }
+                                }
+                            }
+
+                            button {
+                                color: white;
+                                font-size: set-size(lg);
+                                text-transform: capitalize;
+                                letter-spacing: 3px;
+                                background: black;
+                                border: 1px solid white;
+                                cursor: pointer;
+                                position: relative;
+                                top: 0;
+                                margin: 20px 0;
+                                padding: 5px 10px;
+                                transition: 300ms;
+                            
+                                &:hover {
+                                    color: black;
+                                    background: white;
+                                    border: 1px solid black;
+                                    top: -5px;
+                                    box-shadow: $defWhiteShadow;
+                                }
+                            }
+                        }
+                    }
+
+                    #active-mini-modal {
+                        height: $screenHeight;
+                        width: $screenWidth;
+
+                        .modal-x {
+                            @include modal-x;
+                            background: white;
+
+                            &::after {
+                                background: white;
+                            }
+                        }
+                    }
+
+                    .settings-modal {
+                        @include flex-center(column, center);
+                        height: $screenHeight;
+                        width: $screenWidth;
+                        background: white;
+                        border: 1px solid black;
+                        border-radius: 20px;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                        opacity: 0;
+                        position: absolute;
+                        left: 100%;
+                        padding: 5px 15px;
+                        transition: 300ms;
+                        z-index: 5;
+
+                        .modal-text {
+                            @include flex-center(column, center);
+                            width: 100%;
+                            position: relative;
+                            transition: 300ms;
+
+                            h3 {
+                                color: black;
+                                font-size: set-size(xxl);
+                                font-weight: bold;
+                                text-transform: capitalize;
+                                letter-spacing: 3px;
+                            }
+
+                            .bg-list {
+                                @include flex-center;
+                                position: relative;
+                                left: 0;
+                                margin: 20px 0;
+                                
+                                img {
+                                    height: 300px;
+                                    width: 200px;
+                                    object-fit: cover;
+                                    border-radius: 20px;
+                                    box-shadow: $defLightShadow;
+                                    cursor: pointer;
+                                    position: relative;
+                                    top: 0;
+                                    margin: 0 10px;
+                                    transition: 300ms;
+
+                                    &:hover {
+                                        border-radius: 0;
+                                        box-shadow: $defShadow;
+                                        top: -10px;
+                                    }
+                                }
+
+                                #current-bg {
+                                    border: 3px solid $defBlue;
+                                    border-radius: 0;
+                                    box-shadow: $defShadow;
+                                    top: -10px;
+                                }
+                            }
+
+                            .mode-list {
+                                @include flex-center;
+                                width: 100%;
+                                margin: 20px 0;
+
+                                .mode-option {
+                                    @include flex-center;
+                                    background: white;
+                                    border: 1px solid black;
+                                    box-shadow: $defShadow;
+                                    margin: 0 5px;
+                                    padding: 10px 15px;
+
+                                    .mode-chat {
+                                        @include flex-center(column, center);
+                                        background: white;
+                                        border: 1px solid black;
+                                        box-shadow: $defShadow;
+                                        padding: 5px;
+
+                                        .mode-conversation {
+                                            @include flex-center;
+
+                                            .mode-profile {
+                                                height: 30px;
+                                                width: 30px;
+                                                background: black;
+                                                border-radius: 50%;
+                                                margin: 5px;
+                                            }
+        
+                                            .mode-text {
+                                                height: 20px;
+                                                width: 100px;
+                                                background: black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .mode-selected {
+                                @include flex-center(row, space-around);
+                                width: 100%;
+                                margin: 10px 0;
+
+                                .mode-radio {
+                                    @include flex-center;
+                                    margin: 0 10px;
+                                    
+                                    input {
+                                        cursor: pointer;
+                                    }
+                                    
+                                    label {
+                                        color: black;
+                                        font-size: set-size(lg);
+                                        text-transform: capitalize;
+                                        letter-spacing: 3px;
+                                        cursor: pointer;
+                                        margin: 0 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    #active-settings-modal {
+                        opacity: 1;
+                        left: 0;
+
+                        .modal-x {
+                            @include modal-x;
+                        }
+                    }
+
+                    .screen-main-taskbar {
+                        @include screen-taskbar;
+                    }
+
+                    .screen-taskbar {
+                        @include screen-taskbar;
+                        opacity: 0;
+                        bottom: -20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact-border {
+        height: 150px;
+        width: 150px;
+        background: linear-gradient(120deg, $defDarkBlue, $defPink);
+        border-radius: 30% 70% 69% 31% / 43% 70% 30% 57%;
+        position: absolute;
+        left: 20px;
+        bottom: 50px;
+        transition: 300ms;
+
+        &:hover {
+            background: linear-gradient(45deg, $defDarkBlue, $defPink);
+            border-radius: 18% 82% 20% 80% / 83% 12% 88% 17%;
+            box-shadow: $defWhiteShadow;
+        }
+    }
+
+    .custom-shape-divider-bottom-1644508818 {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1644508818 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 50px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1644508818 .shape-fill {
+        fill: #FFFFFF;
+    }
+}

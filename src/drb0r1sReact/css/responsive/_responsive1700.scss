@@ -1,0 +1,135 @@
+@media screen and (min-width: 1700px) {
+    .main-section {
+        .info-holder {
+            img {
+                width: 700px;
+            }
+
+            p {
+                font-size: 25px;
+            }
+
+            .projects-button {
+                font-size: 40px;
+            }
+        }
+
+        .logo-holder {
+            img {
+                width: 550px;
+            }
+        }
+    }
+
+    .menu-section {
+        h2 {
+            font-size: 100px;
+        }
+
+        .logo-holder {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    .about {
+        h2 {
+            font-size: 100px;
+        }
+
+        .about-holder {
+            .about-boris,
+            .about-react,
+            .about-boris-react {
+                .text-holder {
+                    h3 {
+                        font-size: 70px;
+                    }
+                }
+            }
+        }
+    }
+
+    .projects {
+        .projects-holder {
+            h2 {
+                font-size: 100px;
+            }
+
+            .card-holder {
+                .project-card {
+                    .card-title {
+                        h3 {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .project-modal {
+            .modal-bg {
+                h4 {
+                    font-size: 90px;
+                }
+
+                strong {
+                    font-size: 40px;
+                }
+            }
+
+            .modal-info {
+                .basic-info {
+                    h4 {
+                        font-size: 60px;
+                    }
+
+                    h5 {
+                        font-size: 45px;
+                    }
+                }
+                
+                .preview-info {
+                    strong {
+                        font-size: 45px;
+                    }
+                }
+                
+                .description-info {
+                    h5 {
+                        font-size: 80px;
+                    }
+
+                    strong {
+                        font-size: 45px;
+                    }
+
+                    .description-about p {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        .contact-holder {
+            .title-holder {
+                h2 {
+                    font-size: 90px;
+                }
+
+                p {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .see-more {
+        h2 {
+            font-size: 90px;
+        }
+    }
+}

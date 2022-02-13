@@ -1,0 +1,95 @@
+footer {
+    @include flex-center;
+    background: linear-gradient(120deg, $defDarkBlue, $defPink);
+    background-attachment: fixed;
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    transition: 500ms;
+
+    &:hover {
+        background: black;
+        filter: invert(1);
+    }
+
+    .custom-shape-divider-top-1644511879 {
+        position: absolute;
+        top: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    
+    .custom-shape-divider-top-1644511879 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 65px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-top-1644511879 .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    .logo-holder {
+        @include flex-center;
+        margin: 20px 0;
+        
+        a {
+            text-decoration: none;
+
+            .main-img {
+                height: auto;
+                width: 200px;
+                filter: invert(1);
+                position: relative;
+                top: 0;
+                transition: 300ms;
+
+                &:hover {
+                    top: -5px;
+                }
+            }
+        }
+        
+        img {
+            height: auto;
+            width: 150px;
+            filter: invert(0);
+            margin: 0 15px;
+        }
+
+        p {
+            color: white;
+            font-size: set-size(lg);
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+
+    .links-holder {
+        @include flex-center;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            margin: 0 10px;
+            
+            img {
+                height: 50px;
+                width: 50px;
+                filter: invert(1);
+                position: relative;
+                top: 0;
+                transition: 300ms;
+
+                &:hover {
+                    top: -5px;
+                }
+            }
+        }
+    }
+}

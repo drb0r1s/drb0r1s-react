@@ -1,0 +1,4200 @@
+@font-face {
+  font-family: drb0r1sFont;
+  src: url("../Outfit-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: drb0r1sFont;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, white, black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3492eb;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0979e3;
+}
+
+.loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background: white;
+  position: relative;
+}
+
+.loading .loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+  width: 300px;
+  background: black;
+  border: 3px solid white;
+  border-radius: 50%;
+  -webkit-animation: invertLoader 1500ms linear infinite;
+          animation: invertLoader 1500ms linear infinite;
+}
+
+.loading .loader img {
+  height: auto;
+  width: 250px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.loading .circle {
+  height: 290px;
+  width: 290px;
+  background: transparent;
+  border: 10px solid transparent;
+  border-top: 10px solid white;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 5;
+  -webkit-animation: rotating 3s linear infinite, invertLoader 1500ms linear infinite;
+          animation: rotating 3s linear infinite, invertLoader 1500ms linear infinite;
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes invertLoader {
+  0% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  100% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+}
+
+@keyframes invertLoader {
+  0% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+  50% {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+  }
+  100% {
+    -webkit-filter: invert(0);
+            filter: invert(0);
+  }
+}
+
+.main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/main-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/main-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main-section .info-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 3px solid white;
+}
+
+.main-section .info-holder img {
+  height: auto;
+  width: 600px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.main-section .info-holder p {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-section .info-holder p span {
+  text-shadow: 5px 5px 2px rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.main-section .info-holder p a {
+  color: #3492eb;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.main-section .info-holder p a:hover {
+  top: -5px;
+  text-shadow: 5px 5px 2px rgba(255, 255, 255, 0.5);
+}
+
+.main-section .info-holder .projects-button {
+  color: white;
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: #0979e3;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 20px;
+  padding: 5px 10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.main-section .info-holder .projects-button:hover {
+  color: #3492eb;
+  background: white;
+  top: -5px;
+  -webkit-box-shadow: 0px 0px 20px 15px #3492eb;
+          box-shadow: 0px 0px 20px 15px #3492eb;
+}
+
+.main-section .logo-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-section .logo-holder img {
+  height: auto;
+  width: 450px;
+  -webkit-animation: rotating 5s linear infinite;
+          animation: rotating 5s linear infinite;
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.main-section .custom-shape-divider-bottom-1643114718 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.main-section .custom-shape-divider-bottom-1643114718 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 93px;
+}
+
+.main-section .custom-shape-divider-bottom-1643114718 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.menu-section {
+  background: white;
+}
+
+.menu-section h2 {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-top: 20px;
+}
+
+.menu-section .logo-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu-section .logo-holder img {
+  height: auto;
+  width: 200px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  margin: 0 10px;
+}
+
+.menu-section .logo-holder p {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 10px 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 50;
+}
+
+nav .responsive-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .responsive-menu img {
+  height: auto;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav .responsive-menu img:hover {
+  top: -5px;
+  -webkit-filter: drop-shadow(5px 5px 5px #3492eb);
+          filter: drop-shadow(5px 5px 5px #3492eb);
+}
+
+nav .responsive-menu .menu-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 5px;
+}
+
+nav .responsive-menu .menu-holder .r-menu {
+  height: 5px;
+  width: 50px;
+  background: black;
+  position: relative;
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+nav .responsive-menu .menu-holder .r-menu::before, nav .responsive-menu .menu-holder .r-menu::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  position: absolute;
+  top: -10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+nav .responsive-menu .menu-holder .r-menu::after {
+  width: 40px;
+  top: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav .responsive-menu .menu-holder #active-r-menu {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+nav .responsive-menu .menu-holder #active-r-menu::before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+nav .responsive-menu .menu-holder #active-r-menu::after {
+  width: 0;
+  opacity: 0;
+}
+
+nav .classic-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+nav img {
+  height: auto;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav img:hover {
+  top: -5px;
+  -webkit-filter: drop-shadow(5px 5px 5px #3492eb);
+          filter: drop-shadow(5px 5px 5px #3492eb);
+}
+
+nav a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav a:hover {
+  top: -5px;
+  text-shadow: -5px 5px 0px rgba(66, 135, 245, 0.8), -10px 10px 0px rgba(66, 135, 245, 0.9), -15px 15px 0px #4287f5, 2px 2px 4px rgba(206, 89, 55, 0);
+}
+
+nav .drop-down-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  padding: 15px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+nav .drop-down-menu a {
+  text-transform: none;
+  margin: 0 15px;
+}
+
+#active-menu {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.responsive-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 70vw;
+  background: white;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  margin-left: -50%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  z-index: 60;
+}
+
+.responsive-modal img {
+  height: auto;
+  width: 200px;
+}
+
+.responsive-modal .link-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px 0;
+  opacity: 0;
+  position: relative;
+  top: -10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.responsive-modal .link-holder a {
+  color: black;
+  font-size: 35px;
+  text-decoration: none;
+  text-transform: capitalize;
+  position: relative;
+  top: 0;
+  margin: 10px 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.responsive-modal .link-holder a:hover {
+  top: -5px;
+  text-shadow: -5px 5px 0px rgba(66, 135, 245, 0.8), -10px 10px 0px rgba(66, 135, 245, 0.9), -15px 15px 0px #4287f5, 2px 2px 4px rgba(206, 89, 55, 0);
+}
+
+.responsive-modal .link-holder .r-drop-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 0;
+  opacity: 0;
+  margin: 10px 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.responsive-modal .link-holder .r-drop-down a {
+  font-size: 25px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.dropdown-icon {
+  height: auto !important;
+  width: 20px !important;
+  margin: 0 5px !important;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.dropdown-invert {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+#active-section {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: -5px;
+}
+
+#active-section:hover {
+  text-shadow: none;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/about-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/about-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.about .custom-shape-divider-top-1643117808 {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about .custom-shape-divider-top-1643117808 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 112px;
+}
+
+.about .custom-shape-divider-top-1643117808 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.about h2 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 70px;
+  margin-top: 100px;
+}
+
+.about span {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.about .link {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.about .link:hover {
+  top: -5px;
+}
+
+.about .about-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 40px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+  margin-bottom: 70px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.about .about-holder .about-boris {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  width: 85vw;
+  background: white;
+  border-top-left-radius: 40px;
+}
+
+.about .about-holder .about-boris .text-holder {
+  padding: 15px;
+}
+
+.about .about-holder .about-boris .text-holder h3 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.about .about-holder .about-boris .text-holder p {
+  color: black;
+  font-size: 20px;
+}
+
+.about .about-holder .about-boris .logo-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
+  border: 1px solid transparent;
+  border-top-left-radius: 70%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 50%;
+  position: relative;
+  top: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.about .about-holder .about-boris .logo-holder:hover {
+  top: -10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.about .about-holder .about-boris .logo-holder a {
+  text-decoration: none;
+}
+
+.about .about-holder .about-boris .logo-holder a img {
+  height: auto;
+  width: 350px;
+}
+
+.about .about-holder .about-react {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+  width: 85vw;
+  background: black;
+  position: relative;
+}
+
+.about .about-holder .about-react .custom-shape-divider-top-1643124743 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.about .about-holder .about-react .custom-shape-divider-top-1643124743 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+}
+
+.about .about-holder .about-react .custom-shape-divider-top-1643124743 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.about .about-holder .about-react .logo-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-holder .about-react .logo-holder img {
+  height: auto;
+  width: 250px;
+  background: black;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.about .about-holder .about-react .logo-holder img:hover {
+  top: -10px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  border: 1px solid black;
+  -webkit-animation: rotateLogo 3s linear infinite;
+          animation: rotateLogo 3s linear infinite;
+}
+
+@-webkit-keyframes rotateLogo {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateLogo {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.about .about-holder .about-react .text-holder {
+  padding: 15px;
+}
+
+.about .about-holder .about-react .text-holder h3 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.about .about-holder .about-react .text-holder p {
+  color: black;
+  font-size: 20px;
+}
+
+.about .about-holder .about-react .text-holder p {
+  color: white;
+}
+
+.about .about-holder .about-boris-react {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 450px;
+  width: 85vw;
+  background: white;
+  border-bottom-right-radius: 40px;
+  position: relative;
+}
+
+.about .about-holder .about-boris-react .custom-shape-divider-top-1643126683 {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.about .about-holder .about-boris-react .custom-shape-divider-top-1643126683 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.about .about-holder .about-boris-react .custom-shape-divider-top-1643126683 .shape-fill {
+  fill: #000000;
+}
+
+.about .about-holder .about-boris-react .text-holder {
+  padding: 15px;
+}
+
+.about .about-holder .about-boris-react .text-holder h3 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.about .about-holder .about-boris-react .text-holder p {
+  color: black;
+  font-size: 20px;
+}
+
+.about .about-holder .about-boris-react .text-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-holder .about-boris-react .text-holder p {
+  width: 50vw;
+  text-align: center;
+}
+
+.about .about-holder .about-boris-react a {
+  text-decoration: none;
+}
+
+.about .about-holder .about-boris-react a img {
+  height: auto;
+  width: 300px;
+  position: relative;
+  top: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.about .about-holder .about-boris-react a img:hover {
+  top: -10px;
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+          filter: drop-shadow(5px 5px 5px black);
+}
+
+.about .about-holder:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.about .custom-shape-divider-bottom-1643290179 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.about .custom-shape-divider-bottom-1643290179 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.about .custom-shape-divider-bottom-1643290179 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  margin: 50px 0;
+}
+
+.projects .projects-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 146, 235, 0.3)), color-stop(rgba(242, 24, 213, 0.3)), to(rgba(0, 0, 0, 0.7))), url("../images/projects-bg.jpg");
+  background: linear-gradient(rgba(52, 146, 235, 0.3), rgba(242, 24, 213, 0.3), rgba(0, 0, 0, 0.7)), url("../images/projects-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
+}
+
+.projects .projects-holder h2 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 70px;
+}
+
+.projects .projects-holder .card-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85vw;
+  margin: 30px 0;
+  padding: 20px 15px;
+}
+
+.projects .projects-holder .card-holder .project-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+  width: 65vw;
+  background: linear-gradient(45deg, white 50%, #3492eb 60%, #f218d5);
+  border-radius: 20px;
+  position: relative;
+  top: 0;
+  margin: 10px;
+  padding: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card:hover {
+  top: -10px;
+}
+
+.projects .projects-holder .card-holder .project-card .card-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 20vw;
+}
+
+.projects .projects-holder .card-holder .project-card .card-title h3 {
+  color: #0979e3;
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.projects .projects-holder .card-holder .project-card .card-title p {
+  color: #0979e3;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45vw;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 75px;
+  width: 75px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 10px;
+  padding: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects button:hover {
+  background: #3492eb;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects button img {
+  height: auto;
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects button:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .disabled-button {
+  cursor: default;
+  opacity: 0.5;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .disabled-button:hover {
+  background: transparent;
+  top: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .disabled-button:hover img {
+  -webkit-filter: invert(0);
+          filter: invert(0);
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 180px;
+  width: 40vw;
+  border: 3px solid #3492eb;
+  -webkit-box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll .single-project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+  position: relative;
+  margin: 0 15px;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll .single-project img {
+  height: 150px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll .single-project:hover img {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  -webkit-filter: invert(0) brightness(0.5);
+          filter: invert(0) brightness(0.5);
+  top: -5px;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll .single-project strong {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll .single-project:hover strong {
+  opacity: 1;
+}
+
+.projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder .projects-scroll-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: auto;
+}
+
+.projects .projects-holder .card-holder .special-img {
+  height: auto;
+  width: 150px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.projects .project-modal {
+  height: 500px;
+  width: 70vw;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  margin-top: -250px;
+  margin-left: -35vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 60;
+}
+
+.projects .project-modal:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.7);
+}
+
+.projects .project-modal .modal-x {
+  height: 5px;
+  width: 50px;
+  background: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.projects .project-modal .modal-x:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.projects .project-modal .modal-x::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .project-modal .modal-x:hover::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.projects .project-modal .modal-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.projects .project-modal .modal-bg h4 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.projects .project-modal .modal-bg strong {
+  color: #3492eb;
+  font-size: 35px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.projects .project-modal .modal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .project-modal .modal-info .basic-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.projects .project-modal .modal-info .basic-info h4, .projects .project-modal .modal-info .basic-info h5 {
+  color: black;
+  font-size: 50px;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  word-break: break-all;
+}
+
+.projects .project-modal .modal-info .basic-info h5 {
+  font-size: 35px;
+}
+
+.projects .project-modal .modal-info .basic-info span {
+  color: #3492eb;
+  font-weight: bold;
+}
+
+.projects .project-modal .modal-info .preview-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60vw;
+  margin: 20px 0;
+  border-top: 3px solid #3492eb;
+  border-bottom: 3px solid #3492eb;
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 75px;
+  width: 75px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 10px;
+  padding: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider button:hover {
+  color: white;
+  background: #3492eb;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider button img {
+  height: auto;
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider button:hover img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+  height: 400px;
+  width: auto;
+  border: 1px solid #3492eb;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.projects .project-modal .modal-info .preview-info strong {
+  color: black;
+  font-size: 35px;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 5px;
+  margin: 15px 0;
+}
+
+.projects .project-modal .modal-info .preview-info strong a {
+  color: #3492eb;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.projects .project-modal .modal-info .preview-info strong a:hover {
+  top: -5px;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.projects .project-modal .modal-info .description-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projects .project-modal .modal-info .description-info h5 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #3492eb;
+  font-size: 70px;
+  text-transform: capitalize;
+}
+
+.projects .project-modal .modal-info .description-info .description-about,
+.projects .project-modal .modal-info .description-info .description-dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 3px dashed #3492eb;
+  margin: 20px 0;
+  padding: 15px 10px;
+}
+
+.projects .project-modal .modal-info .description-info .description-about p,
+.projects .project-modal .modal-info .description-info .description-dev p {
+  width: 600px;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.projects .project-modal .modal-info .description-info .description-about p span,
+.projects .project-modal .modal-info .description-info .description-dev p span {
+  text-transform: none;
+}
+
+.projects .project-modal .modal-info .description-info .description-dev {
+  border: none;
+}
+
+.projects .project-modal .modal-info .description-info .description-dev .dev-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects .project-modal .modal-info .description-info .description-dev .dev-images .dev-logo {
+  height: auto;
+  width: 100px;
+  margin: 0 20px;
+}
+
+.projects .project-modal .modal-info .description-info strong {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projects .project-modal .modal-info .description-info span {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.r-button-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+
+.project-card-left {
+  -webkit-box-shadow: 15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+          box-shadow: 15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.project-card-left:hover {
+  -webkit-box-shadow: 25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.project-card-right {
+  -webkit-box-shadow: -15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+          box-shadow: -15px -10px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.project-card-right:hover {
+  -webkit-box-shadow: -25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: -25px -20px 0px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
+  position: relative;
+  padding: 70px 10px;
+}
+
+.contact .custom-shape-divider-top-1644067675 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.contact .custom-shape-divider-top-1644067675 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 70px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.contact .custom-shape-divider-top-1644067675 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.contact .contact-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-holder .title-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-holder .title-holder h2 {
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact .contact-holder .title-holder h2 span {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact .contact-holder .title-holder p {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+
+.contact .contact-holder .title-holder p span {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.contact .contact-holder .content-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-holder .content-holder .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 650px;
+  width: 450px;
+  background: white;
+  border-radius: 20px;
+  -webkit-box-shadow: inset -5px 3px 15px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: inset -5px 3px 15px 5px rgba(0, 0, 0, 0.7);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  top: 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  z-index: 5;
+}
+
+.contact .contact-holder .content-holder .phone:hover {
+  top: -10px;
+}
+
+.contact .contact-holder .content-holder .phone .camera {
+  height: 15px;
+  width: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+}
+
+.contact .contact-holder .content-holder .phone .screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 600px;
+  width: 400px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../images/about-bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/about-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+  border-bottom: 1px solid white;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-time strong {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-time strong:last-child {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps .screen-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  margin: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps .screen-app .icon-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 75px;
+  width: 75px;
+  background: white;
+  border-radius: 25px;
+  position: relative;
+  top: 0;
+  padding: 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps .screen-app .icon-holder img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps .screen-app:hover .icon-holder {
+  border-radius: 50%;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-apps .screen-app p {
+  color: white;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 0;
+  width: 0;
+  background: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: absolute;
+  padding: 5px 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 5;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  opacity: 0;
+  position: relative;
+  top: -15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-bg,
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 10px 15px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-bg strong,
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode strong {
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-bg p,
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode p {
+  height: 50px;
+  width: 50px;
+  color: grey;
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-bg p:hover,
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode p:hover {
+  color: white;
+  background: black;
+  border-radius: 50%;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode {
+  border-top: none;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 15px 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-logo img {
+  height: 75px;
+  width: 75px;
+  margin-right: 10px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-logo p {
+  color: black;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile img {
+  height: 100px;
+  width: 100px;
+  border: 10px double black;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile img:hover {
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile .app-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile .app-info p {
+  color: black;
+  font-size: 30px;
+  margin: 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile .app-info strong {
+  color: black;
+  font-size: 25px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text a {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background: black;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 15px 0;
+  padding: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text a:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-app-modal {
+  height: 600px;
+  width: 400px;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x {
+  height: 5px;
+  width: 50px;
+  background: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x:hover::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen #minimized-app-modal {
+  height: 0;
+  width: 0;
+  bottom: -20px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 0;
+  width: 0;
+  background: transparent;
+  border: none;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  position: absolute;
+  padding: 5px 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 10;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  position: relative;
+  top: -15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text strong {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+  width: 250px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  margin: 0 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .modal-x {
+  height: 5px;
+  width: 50px;
+  background: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+  height: 3px !important;
+  width: 30px !important;
+  background: black !important;
+  top: 30px !important;
+  right: 30px !important;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .modal-x:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .modal-x::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .modal-x:hover::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .modal-x::after {
+  height: 3px !important;
+  width: 30px !important;
+  background: black !important;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .mini-app-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .mini-app-info:hover {
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .mini-app-info img {
+  height: 100px;
+  width: 100px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app .mini-app-info strong {
+  color: black;
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text button {
+  color: white;
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  background: black;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 20px 0;
+  padding: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text button:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal {
+  height: 600px;
+  width: 400px;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x {
+  height: 5px;
+  width: 50px;
+  background: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+  background: white;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x:hover::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x::after {
+  background: white;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 600px;
+  width: 400px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  opacity: 0;
+  position: absolute;
+  left: 100%;
+  padding: 5px 15px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  z-index: 5;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  position: relative;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text h3 {
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .bg-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  left: 0;
+  margin: 20px 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .bg-list img {
+  height: 300px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 0 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .bg-list img:hover {
+  border-radius: 0;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  top: -10px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .bg-list #current-bg {
+  border: 3px solid #3492eb;
+  border-radius: 0;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  top: -10px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  margin: 0 5px;
+  padding: 10px 15px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option .mode-chat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option .mode-chat .mode-conversation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option .mode-chat .mode-conversation .mode-profile {
+  height: 30px;
+  width: 30px;
+  background: black;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option .mode-chat .mode-conversation .mode-text {
+  height: 20px;
+  width: 100px;
+  background: black;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-selected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-selected .mode-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 10px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-selected .mode-radio input {
+  cursor: pointer;
+}
+
+.contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-selected .mode-radio label {
+  color: black;
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-settings-modal {
+  opacity: 1;
+  left: 0;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x {
+  height: 5px;
+  width: 50px;
+  background: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: 700ms;
+  transition: 700ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x:hover {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x::after {
+  display: block;
+  content: "";
+  height: 5px;
+  width: 50px;
+  background: black;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x:hover::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-main-taskbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-main-taskbar button {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 3px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 0 15px;
+  padding: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-main-taskbar button:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-taskbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  opacity: 0;
+  bottom: -20px;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-taskbar button {
+  color: white;
+  font-size: 35px;
+  letter-spacing: 3px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 0 15px;
+  padding: 5px 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-holder .content-holder .phone .screen .screen-taskbar button:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+  top: -5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-border {
+  height: 150px;
+  width: 150px;
+  background: linear-gradient(120deg, #0979e3, #f218d5);
+  border-radius: 30% 70% 69% 31% / 43% 70% 30% 57%;
+  position: absolute;
+  left: 20px;
+  bottom: 50px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.contact .contact-border:hover {
+  background: linear-gradient(45deg, #0979e3, #f218d5);
+  border-radius: 18% 82% 20% 80% / 83% 12% 88% 17%;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.5);
+}
+
+.contact .custom-shape-divider-bottom-1644508818 {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.contact .custom-shape-divider-bottom-1644508818 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.contact .custom-shape-divider-bottom-1644508818 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.see-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  padding: 20px 15px;
+  position: relative;
+}
+
+.see-more h2 {
+  background: -webkit-linear-gradient(45deg, #0979e3, #f218d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.see-more .see-more-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.see-more .see-more-holder a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(white)), url("../images/see-more-bg.jpg");
+  background: linear-gradient(white, white), url("../images/see-more-bg.jpg");
+  background-position-x: 1000px;
+  border: 1px solid #f218d5;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  margin: 0 20px;
+  padding: 10px 15px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.see-more .see-more-holder a:hover {
+  top: -5px;
+  background: url("../images/see-more-bg.jpg");
+  background-position-x: -50px;
+  border: 1px solid white;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.see-more .see-more-holder a img {
+  height: 75px;
+  width: 75px;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
+  margin: 0 10px;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.see-more .see-more-holder a:hover img {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
+.see-more .see-more-holder a strong {
+  color: black;
+  font-size: 35px;
+  text-transform: uppercase;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.see-more .see-more-holder a:hover strong {
+  color: white;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: linear-gradient(120deg, #0979e3, #f218d5);
+  background-attachment: fixed;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+footer:hover {
+  background: black;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+footer .custom-shape-divider-top-1644511879 {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+footer .custom-shape-divider-top-1644511879 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 65px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+footer .custom-shape-divider-top-1644511879 .shape-fill {
+  fill: #FFFFFF;
+}
+
+footer .logo-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+footer .logo-holder a {
+  text-decoration: none;
+}
+
+footer .logo-holder a .main-img {
+  height: auto;
+  width: 200px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+footer .logo-holder a .main-img:hover {
+  top: -5px;
+}
+
+footer .logo-holder img {
+  height: auto;
+  width: 150px;
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  margin: 0 15px;
+}
+
+footer .logo-holder p {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+footer .links-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .links-holder a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .links-holder a img {
+  height: 50px;
+  width: 50px;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  position: relative;
+  top: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+footer .links-holder a img:hover {
+  top: -5px;
+}
+
+@media screen and (max-width: 319px) {
+  .loading .loader {
+    height: 150px;
+    width: 150px;
+  }
+  .loading .loader img {
+    width: 100px;
+  }
+  .loading .circle {
+    height: 140px;
+    width: 140px;
+  }
+  .main-section .info-holder {
+    border: none;
+  }
+  .main-section .info-holder img {
+    width: 240px;
+    margin-top: 30px;
+  }
+  .main-section .info-holder .projects-button {
+    font-size: 35px;
+  }
+  .main-section .logo-holder img {
+    width: 170px;
+    margin-bottom: 50px;
+  }
+  .menu-section h2 {
+    font-size: 40px;
+  }
+  .menu-section .logo-holder img {
+    width: 100px;
+  }
+  nav .responsive-menu img {
+    width: 140px;
+  }
+  .responsive-modal {
+    width: 80vw;
+  }
+  .about {
+    overflow: hidden;
+  }
+  .about h2 {
+    font-size: 60px;
+  }
+  .about .about-holder .about-boris,
+  .about .about-holder .about-react,
+  .about .about-holder .about-boris-react {
+    height: 1200px;
+    width: 95vw;
+  }
+  .about .about-holder .about-boris .logo-holder {
+    height: 150px;
+  }
+  .about .about-holder .about-boris .logo-holder a img {
+    width: 250px;
+  }
+  .about .about-holder .about-react {
+    height: 1300px;
+  }
+  .about .about-holder .about-react .logo-holder img {
+    width: 200px;
+  }
+  .about .about-holder .about-boris-react {
+    height: 800px;
+  }
+  .about .about-holder .about-boris-react .text-holder h3 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .about .about-holder .about-boris-react .text-holder p {
+    width: auto;
+  }
+  .about .about-holder .about-boris-react a img {
+    width: 200px;
+  }
+  .projects .projects-holder {
+    width: 95vw;
+  }
+  .projects .projects-holder h2 {
+    font-size: 40px;
+  }
+  .projects .projects-holder .card-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .special-img {
+    width: 100px;
+    margin: 15px 0;
+  }
+  .projects .projects-holder .card-holder .project-card {
+    height: 400px;
+    width: 80vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title {
+    width: 100%;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title h3 {
+    font-size: 30px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects button img {
+    width: 30px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder {
+    width: 180px;
+  }
+  .projects .project-modal {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 35px;
+  }
+  .projects .project-modal .modal-bg strong {
+    font-size: 25px;
+  }
+  .projects .project-modal .modal-info .basic-info h4 {
+    font-size: 25px;
+  }
+  .projects .project-modal .modal-info .basic-info h5 {
+    font-size: 20px;
+  }
+  .projects .project-modal .modal-info .description-info h5 {
+    font-size: 30px;
+  }
+  .projects .project-modal .modal-info .description-info .description-about p {
+    width: 80vw;
+  }
+  .projects .project-modal .modal-info .description-info .description-dev .dev-images .dev-logo {
+    margin: 10px;
+  }
+  .projects .project-modal .modal-info .preview-info strong {
+    font-size: 25px;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 100px;
+  }
+  .contact .contact-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-holder .title-holder h2 {
+    font-size: 40px;
+  }
+  .contact .contact-holder .title-holder p {
+    font-size: 20px;
+  }
+  .contact .contact-holder .content-holder .phone {
+    width: 240px;
+  }
+  .contact .contact-holder .content-holder .phone .screen {
+    width: 220px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-time strong:last-child {
+    font-size: 17px;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-app-modal,
+  .contact .contact-holder .content-holder .phone .screen #active-mini-modal,
+  .contact .contact-holder .content-holder .phone .screen .settings-modal {
+    width: 220px;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x,
+  .contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x,
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-x {
+    top: 30px;
+    right: 10px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-profile .app-info strong {
+    font-size: 20px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-logo img {
+    height: 50px;
+    width: 50px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .app-logo p {
+    font-size: 25px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-bg strong,
+  .contact .contact-holder .content-holder .phone .screen .screen-app-modal .modal-text .settings-mode strong {
+    font-size: 18px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-mini-modal .modal-text .mini-apps .mini-app {
+    width: 200px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option {
+    margin: 10px 0;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x {
+    top: 30px;
+    right: 10px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .screen-main-taskbar button,
+  .contact .contact-holder .content-holder .phone .screen .screen-taskbar button {
+    font-size: 25px;
+  }
+  .see-more h2 {
+    font-size: 40px;
+  }
+  .see-more .see-more-holder a img {
+    height: 50px;
+    width: 50px;
+  }
+  .see-more .see-more-holder a strong {
+    font-size: 30px;
+  }
+  .see-more .see-more-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .see-more .see-more-holder a {
+    margin: 15px 0;
+  }
+  footer .footer-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .logo-holder img {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .loading .loader {
+    height: 240px;
+    width: 240px;
+  }
+  .loading .loader img {
+    width: 190px;
+  }
+  .loading .circle {
+    height: 230px;
+    width: 230px;
+  }
+  .main-section .info-holder {
+    border: none;
+  }
+  .main-section .info-holder img {
+    width: 315px;
+    margin-top: 30px;
+  }
+  .main-section .info-holder .projects-button {
+    font-size: 35px;
+  }
+  .main-section .logo-holder img {
+    width: 230px;
+    margin-bottom: 50px;
+  }
+  .menu-section h2 {
+    font-size: 60px;
+  }
+  .menu-section .logo-holder img {
+    width: 140px;
+  }
+  .about {
+    overflow: hidden;
+  }
+  .about .about-holder .about-boris,
+  .about .about-holder .about-react,
+  .about .about-holder .about-boris-react {
+    height: 1000px;
+    width: 95vw;
+  }
+  .about .about-holder .about-boris .logo-holder {
+    height: 200px;
+  }
+  .about .about-holder .about-boris .logo-holder a img {
+    width: 300px;
+  }
+  .about .about-holder .about-react {
+    height: 1100px;
+  }
+  .about .about-holder .about-boris-react {
+    height: 700px;
+  }
+  .about .about-holder .about-boris-react .text-holder h3 {
+    text-align: center;
+  }
+  .about .about-holder .about-boris-react .text-holder p {
+    width: auto;
+  }
+  .projects .projects-holder {
+    width: 95vw;
+  }
+  .projects .projects-holder h2 {
+    font-size: 50px;
+  }
+  .projects .projects-holder .card-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .special-img {
+    margin: 15px 0;
+  }
+  .projects .projects-holder .card-holder .project-card {
+    height: 400px;
+    width: 80vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title {
+    width: 100%;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title h3 {
+    font-size: 40px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects button img {
+    width: 30px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder {
+    width: 240px;
+  }
+  .projects .project-modal {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 35px;
+  }
+  .projects .project-modal .modal-bg strong {
+    font-size: 25px;
+  }
+  .projects .project-modal .modal-info .basic-info h4 {
+    font-size: 35px;
+  }
+  .projects .project-modal .modal-info .basic-info h5 {
+    font-size: 30px;
+  }
+  .projects .project-modal .modal-info .description-info h5 {
+    font-size: 40px;
+  }
+  .projects .project-modal .modal-info .description-info .description-about p {
+    width: 80vw;
+  }
+  .projects .project-modal .modal-info .description-info .description-dev .dev-images .dev-logo {
+    margin: 10px;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 140px;
+  }
+  .contact .contact-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-holder .content-holder .phone {
+    width: 315px;
+  }
+  .contact .contact-holder .content-holder .phone .screen {
+    width: 285px;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-app-modal,
+  .contact .contact-holder .content-holder .phone .screen #active-mini-modal,
+  .contact .contact-holder .content-holder .phone .screen .settings-modal {
+    width: 285px;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-app-modal .modal-x,
+  .contact .contact-holder .content-holder .phone .screen #active-mini-modal .modal-x,
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-x {
+    top: 30px;
+    right: 10px;
+  }
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact .contact-holder .content-holder .phone .screen .settings-modal .modal-text .mode-list .mode-option {
+    margin: 10px 0;
+  }
+  .contact .contact-holder .content-holder .phone .screen #active-settings-modal .modal-x {
+    top: 30px;
+    right: 10px;
+  }
+  .see-more h2 {
+    font-size: 60px;
+  }
+  .see-more .see-more-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .see-more .see-more-holder a {
+    margin: 15px 0;
+  }
+  footer .footer-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .logo-holder img {
+    width: 135px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .main-section .info-holder {
+    border: none;
+  }
+  .main-section .info-holder img {
+    width: 450px;
+    margin-top: 30px;
+  }
+  .main-section .info-holder .projects-button {
+    font-size: 35px;
+  }
+  .main-section .logo-holder img {
+    width: 280px;
+    margin-bottom: 50px;
+  }
+  .about {
+    overflow: hidden;
+  }
+  .about .about-holder .about-boris,
+  .about .about-holder .about-react,
+  .about .about-holder .about-boris-react {
+    height: 800px;
+    width: 95vw;
+  }
+  .about .about-holder .about-boris .logo-holder {
+    height: 200px;
+  }
+  .about .about-holder .about-boris .logo-holder a img {
+    width: 350px;
+  }
+  .about .about-holder .about-boris-react {
+    height: 600px;
+  }
+  .about .about-holder .about-boris-react .text-holder h3 {
+    text-align: center;
+  }
+  .about .about-holder .about-boris-react .text-holder p {
+    width: auto;
+  }
+  .projects .projects-holder {
+    width: 95vw;
+  }
+  .projects .projects-holder .card-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .special-img {
+    margin: 15px 0;
+  }
+  .projects .projects-holder .card-holder .project-card {
+    width: 80vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title {
+    width: 100%;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title h3 {
+    font-size: 50px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects {
+    width: 100%;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects button img {
+    width: 30px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects .card-projects-holder {
+    width: 300px;
+  }
+  .projects .project-modal {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 60px;
+  }
+  .projects .project-modal .modal-info .description-info .description-about p {
+    width: 80vw;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 210px;
+  }
+  .contact .contact-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .see-more .see-more-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .see-more .see-more-holder a {
+    margin: 15px 0;
+  }
+  footer .footer-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .main-section .info-holder img {
+    width: 400px;
+  }
+  .main-section .logo-holder img {
+    width: 240px;
+  }
+  .about {
+    overflow: hidden;
+  }
+  .about .about-holder .about-boris,
+  .about .about-holder .about-react,
+  .about .about-holder .about-boris-react {
+    width: 95vw;
+  }
+  .about .about-holder .about-boris .text-holder h3,
+  .about .about-holder .about-react .text-holder h3,
+  .about .about-holder .about-boris-react .text-holder h3 {
+    margin-top: 30px;
+  }
+  .about .about-holder .about-boris .text-holder p,
+  .about .about-holder .about-react .text-holder p,
+  .about .about-holder .about-boris-react .text-holder p {
+    font-size: 18px;
+  }
+  .about .about-holder .about-boris .logo-holder {
+    height: 300px;
+  }
+  .about .about-holder .about-boris .logo-holder a img {
+    width: 250px;
+  }
+  .about .about-holder .about-react {
+    height: 420px;
+  }
+  .about .about-holder .about-react .text-holder h3 {
+    margin-top: 60px;
+  }
+  .projects .projects-holder {
+    width: 95vw;
+  }
+  .projects .projects-holder .card-holder .special-img {
+    width: 100px;
+    position: relative;
+    left: 20px;
+  }
+  .projects .projects-holder .card-holder .left-img {
+    position: relative;
+    left: -20px;
+  }
+  .projects .projects-holder .card-holder .project-card {
+    width: 80vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title {
+    width: 100%;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title h3 {
+    font-size: 50px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-projects {
+    width: 100%;
+  }
+  .projects .project-modal {
+    width: 90vw;
+    margin-left: -45vw;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 60px;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 270px;
+  }
+  .contact .contact-holder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .main-section .info-holder img {
+    width: 500px;
+  }
+  .main-section .logo-holder img {
+    width: 330px;
+  }
+  .about .about-holder .about-boris,
+  .about .about-holder .about-react,
+  .about .about-holder .about-boris-react {
+    width: 95vw;
+  }
+  .about .about-holder .about-boris .text-holder h3,
+  .about .about-holder .about-react .text-holder h3,
+  .about .about-holder .about-boris-react .text-holder h3 {
+    margin-top: 30px;
+  }
+  .about .about-holder .about-boris .logo-holder {
+    height: 300px;
+  }
+  .about .about-holder .about-boris .logo-holder a img {
+    width: 300px;
+  }
+  .projects .projects-holder .card-holder .special-img {
+    width: 120px;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 60px;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 270px;
+  }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1699px) {
+  .main-section .info-holder img {
+    width: 500px;
+  }
+  .main-section .logo-holder img {
+    width: 390px;
+  }
+  .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .main-section .info-holder img {
+    width: 700px;
+  }
+  .main-section .info-holder p {
+    font-size: 25px;
+  }
+  .main-section .info-holder .projects-button {
+    font-size: 40px;
+  }
+  .main-section .logo-holder img {
+    width: 550px;
+  }
+  .menu-section h2 {
+    font-size: 100px;
+  }
+  .menu-section .logo-holder img {
+    width: 300px;
+  }
+  .about h2 {
+    font-size: 100px;
+  }
+  .about .about-holder .about-boris .text-holder h3,
+  .about .about-holder .about-react .text-holder h3,
+  .about .about-holder .about-boris-react .text-holder h3 {
+    font-size: 70px;
+  }
+  .projects .projects-holder h2 {
+    font-size: 100px;
+  }
+  .projects .projects-holder .card-holder .project-card .card-title h3 {
+    font-size: 50px;
+  }
+  .projects .project-modal .modal-bg h4 {
+    font-size: 90px;
+  }
+  .projects .project-modal .modal-bg strong {
+    font-size: 40px;
+  }
+  .projects .project-modal .modal-info .basic-info h4 {
+    font-size: 60px;
+  }
+  .projects .project-modal .modal-info .basic-info h5 {
+    font-size: 45px;
+  }
+  .projects .project-modal .modal-info .preview-info strong {
+    font-size: 45px;
+  }
+  .projects .project-modal .modal-info .description-info h5 {
+    font-size: 80px;
+  }
+  .projects .project-modal .modal-info .description-info strong {
+    font-size: 45px;
+  }
+  .projects .project-modal .modal-info .description-info .description-about p {
+    font-size: 25px;
+  }
+  .contact .contact-holder .title-holder h2 {
+    font-size: 90px;
+  }
+  .contact .contact-holder .title-holder p {
+    font-size: 30px;
+  }
+  .see-more h2 {
+    font-size: 90px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

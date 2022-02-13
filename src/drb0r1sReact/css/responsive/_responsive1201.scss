@@ -1,0 +1,19 @@
+@media screen and (min-width: 1201px) and (max-width: 1699px) {
+    .main-section {
+        .info-holder {
+            img {
+                width: 500px;
+            }
+        }
+
+        .logo-holder {
+            img {
+                width: 390px;
+            }
+        }
+    }
+
+    .projects .project-modal .modal-info .preview-info .images-slider .main-slider {
+        height: 330px;
+    }
+}

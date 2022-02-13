@@ -1,0 +1,107 @@
+.main-section {
+    @include flex-center;
+    min-height: 100vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ), url("../images/main-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+    .info-holder {
+        @include flex-center(column, center);
+        border-right: 3px solid white;
+
+        img {
+            height: auto;
+            width: 600px;
+            filter: invert(1)
+        }
+
+        p {
+            color: white;
+            font-size: set-size(md);
+            text-align: center;
+
+            span {
+                text-shadow: $defWhiteTextShadow;
+                font-weight: bold;
+                font-style: italic;
+            }
+
+            a {
+                color: $defBlue;
+                text-decoration: none;
+                font-weight: bold;
+                position: relative;
+                top: 0;
+                transition: 300ms;
+
+                &:hover {
+                    top: -5px;
+                    text-shadow: $defWhiteTextShadow;
+                }
+            }
+        }
+
+        .projects-button {
+            color: white;
+            font-size: set-size(lg);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: $defDarkBlue;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            top: 0;
+            margin: 20px;
+            padding: 5px 10px;
+            transition: 500ms;
+
+            &:hover {
+                color: $defBlue;
+                background: white;
+                top: -5px;
+                box-shadow: $defNeonBlueShadow;
+            }
+        }
+    }
+
+    .logo-holder {
+        @include flex-center;
+        
+        img {
+            height: auto;
+            width: 450px;
+            animation: rotating 5s linear infinite;
+
+            @keyframes rotating {
+                0% { transform: rotate(0); }
+                100% { transform: rotate(360deg); }
+            }
+        }
+    }
+
+    .custom-shape-divider-bottom-1643114718 {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1643114718 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 93px;
+    }
+    
+    .custom-shape-divider-bottom-1643114718 .shape-fill {
+        fill: #FFFFFF;
+    }
+}
